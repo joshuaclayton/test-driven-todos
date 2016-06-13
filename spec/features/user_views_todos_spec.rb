@@ -6,6 +6,6 @@ feature "User views todos" do
 
     visit root_path
 
-    expect(page).to have_css "li", text: "Buy eggs"
+    expect(page).to have_todo "Buy eggs"
   end
 end
