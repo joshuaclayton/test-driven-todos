@@ -8,6 +8,8 @@ describe TodosController, "#create" do
       }
     }
 
+    @request.session[:current_email] = "person@example.com"
+
     post :create, todo_params
 
     expect(Todo.where(title: "Buy eggs").count).to eq 1

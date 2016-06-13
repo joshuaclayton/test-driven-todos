@@ -8,7 +8,11 @@
 </head>
 <body>
 
-  <h1>Todos</h1>
+  <header>
+    <h1>Todos</h1>
+    <%= session[:current_email] %>
+  </header>
+
   <%= yield %>
 
 </body>

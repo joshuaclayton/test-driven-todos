@@ -2,7 +2,8 @@ require "rails_helper"
 
 feature "User creates todo" do
   scenario "successfully" do
-    visit root_path
+    sign_in_as "person@example.com"
+
     create_todo_titled "Buy eggs"
 
     expect(page).to have_todo "Buy eggs"

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root "todos#index"
 
+  resource :session, only: [:new, :create]
+
   resources :todos, only: [:new, :create]
 
   # Example of regular route:
