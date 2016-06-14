@@ -15,10 +15,4 @@ class TodosController < ApplicationController
     current_user.todos.create(params.require(:todo).permit(:title))
     redirect_to root_path
   end
-
-  def ensure_user_logged_in
-    if current_email.blank?
-      redirect_to new_session_path
-    end
-  end
 end
