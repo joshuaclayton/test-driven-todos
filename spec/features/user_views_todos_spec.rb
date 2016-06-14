@@ -2,9 +2,9 @@ require "rails_helper"
 
 feature "User views todos" do
   scenario "successfully" do
-    Todo.create!(title: "Buy eggs", owner_email: "person@example.com")
-    Todo.create!(title: "Buy corn", owner_email: "person@example.com")
-    Todo.create!(title: "Buy milk", owner_email: "someone+else@example.com")
+    create(:todo, title: "Buy eggs", owner_email: "person@example.com")
+    create(:todo, title: "Buy corn", owner_email: "person@example.com")
+    create(:todo, title: "Buy milk", owner_email: "someone+else@example.com")
 
     sign_in_as "person@example.com"
 
