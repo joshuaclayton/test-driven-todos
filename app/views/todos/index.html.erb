@@ -13,6 +13,9 @@
 <h2>Complete todos</h2>
 <ul class="completed">
   <% @completed_todos.each do |todo| %>
-    <li><%= todo.title %></li>
+    <li>
+      <%= todo.title %>
+      <%= link_to "Mark incomplete", todo_completion_path(todo), method: :delete %>
+    </li>
   <% end %>
 </ul>

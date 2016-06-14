@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create]
 
   resources :todos, only: [:new, :create] do
-    resource :completion, only: [:create]
+    resource :completion, only: [:create, :destroy]
   end
 
   # Example of regular route:
