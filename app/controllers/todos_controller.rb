@@ -3,7 +3,8 @@ class TodosController < ApplicationController
 
   def index
     # @todos = Todo.where(owner_email: current_email)
-    @todos = current_user.todos
+    @incomplete_todos = current_user.todos.where(completed_at: nil)
+    @completed_todos = current_user.todos.where.not(completed_at: nil)
   end
 
   def new
