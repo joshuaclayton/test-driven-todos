@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "User views todos" do
+feature "User views todos", js: true do
   scenario "successfully" do
     create(:todo, title: "Buy eggs", owner_email: "person@example.com")
     create(:todo, title: "Buy corn", owner_email: "person@example.com")

@@ -41,7 +41,9 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'factory_girl_rails', '4.7.0'
+  gem 'poltergeist'
   gem 'shoulda-matchers', '3.1.1'
   gem 'simplecov', require: false
 end
