@@ -7,8 +7,8 @@ feature "User views todos" do
 
     sign_in_as "person@example.com"
 
-    expect(page).to have_todo "Buy eggs"
+    expect(page).to have_incomplete_todo "Buy eggs"
     expect(page).to have_content "person@example.com"
-    expect(page).not_to have_todo "Buy milk"
+    expect(page).not_to have_incomplete_todo "Buy milk"
   end
 end

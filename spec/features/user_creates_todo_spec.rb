@@ -6,6 +6,6 @@ feature "User creates todo" do
 
     create_todo_titled "Buy eggs"
 
-    expect(page).to have_todo "Buy eggs"
+    expect(page).to have_incomplete_todo "Buy eggs"
   end
 end

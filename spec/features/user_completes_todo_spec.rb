@@ -12,18 +12,7 @@ feature "User completes todo" do
     mark_complete "Buy eggs"
 
     # ensure todo shows up in the "complete" list
-    within "ul.completed" do
-      expect(page).to have_todo "Buy eggs"
-    end
-
-    within "ul.incomplete" do
-      expect(page).not_to have_todo "Buy eggs"
-    end
-  end
-
-  def mark_complete(title)
-    within "li:contains('#{title}')" do
-      click_on "Mark complete"
-    end
+    expect(page).to have_completed_todo "Buy eggs"
+    expect(page).not_to have_incomplete_todo "Buy eggs"
   end
 end
