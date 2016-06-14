@@ -6,6 +6,7 @@
     <li>
       <%= todo.title %>
       <%= link_to "Mark complete", todo_completion_path(todo), method: :post %>
+      <%= link_to "Clone", todo_clone_path(todo), method: :post %>
     </li>
   <% end %>
 </ul>

@@ -24,4 +24,10 @@ module Features
       click_on "Mark incomplete"
     end
   end
+
+  def clone_todo(title)
+    within "li:contains('#{title}')" do
+      click_on "Clone"
+    end
+  end
 end

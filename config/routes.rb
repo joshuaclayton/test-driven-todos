@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :todos, only: [:new, :create] do
     resource :completion, only: [:create, :destroy]
+    resource :clone, only: [:create]
   end
 
   # Example of regular route:
