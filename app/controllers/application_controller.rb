@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_email
 
+  def current_user
+    User.new current_email
+  end
+
   def sign_in_as(email)
     session[:current_email] = email
   end
